@@ -4,9 +4,9 @@ const Navbar = () => {
 
 	return (
 		<>
-			<div className="flex border-y-2  justify-center gap-3">
-				<p className="p-2 border-x-2">Home</p>
-				<p className="p-2 border-x-2">Spaceship</p>
+			<div className="flex border-y-2  justify-center">
+				<button className="text-white p-2 px-4 border-r-2 border-s-2">HOME</button>
+				<button className="text-white p-2 px-4 border-e-2">SPACESHIP</button>
 			</div>
 		</>
 	)
