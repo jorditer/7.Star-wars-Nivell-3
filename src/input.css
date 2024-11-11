@@ -8,3 +8,19 @@ body {
 p {
 	color: white;
 }
+
+h2 {
+	@apply text-stone-200;
+}
+
+h3 {
+	@apply text-stone-500;
+}
+
+h2 {
+	@apply text-xl;
+}
+
+p, h2, h3 {
+	font-family:"Times New Roman", Times, serif;
+}
