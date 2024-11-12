@@ -1,17 +1,20 @@
 // import { useState } from 'react'
-import Header from './Header.tsx'
-import Navbar from './Navbar.tsx'
-import Body from './Body.tsx'
-
+import Layout from './Layout/Layout'
+import Home from './Home.tsx';
+import Starships from './Starships';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
 
   return (
-   <div className="">
-    <Header />
-    <Navbar />
-    <Body />
-   </div> 
+  <div className="">
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='starships' element={<Starships />} />
+      </Route>
+    </Routes>
+  </div> 
   )
 }
 
