@@ -1,10 +1,6 @@
 // src/hooks/useStarships.ts
+import { Starship } from '../interfaces/Starship';
 import { useInfiniteQuery } from 'react-query';
-
-export interface Starship {
-  name: string;
-  model: string;
-}
 
 interface StarshipsData {
   results: Starship[];

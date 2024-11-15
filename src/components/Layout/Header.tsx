@@ -2,8 +2,8 @@
 const Header = () => {
 
 	return (
-		<div className="flex justify-center py-4">
-			<img className="w-2/6 border p-2 rounded-lg" src="src\imgs\logo.svg" alt="Star Wars logo" />
+		<div className="w-[40%] md:w-[25%] self-center flex max-h-96 justify-center pt-2 pb-4">
+			<img className="border p-2 rounded-lg" src="/src/imgs/logo.svg" alt="Star Wars logo" />
 		</div>
 	)
 }

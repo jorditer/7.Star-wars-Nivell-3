@@ -9,18 +9,42 @@ p {
 	color: white;
 }
 
-h2 {
+h1, h2 {
 	@apply text-stone-300;
 }
 
-h3 {
+h3, p {
 	@apply text-stone-500;
+}
+
+p {
+	@apply text-lg;
 }
 
 h2 {
 	@apply text-xl;
 }
 
-p, h2, h3 {
+h1, p, h2, h3 {
 	font-family:"Times New Roman", Times, serif;
 }
+
+h1 {
+	@apply text-3xl;
+}
+
+h3 {
+	color: gray
+}
+
+span {
+	@apply text-stone-300
+}
+
+*:startships {
+	@apply bg-slate-500;
+}
+
+/* .pilots-grid {
+	grid-template-columns: auto-fit;
+} */
