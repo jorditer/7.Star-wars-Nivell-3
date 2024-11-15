@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchPilots } from '../../hooks/usPilots';
+import { fetchPilots } from '../../hooks/usePilots';
 import { Pilot } from "../../interfaces/Pilot";
 import Separator from './Separator';
 
@@ -28,7 +28,7 @@ const Pilots = ({ pilotUrls }: { pilotUrls: string[] }) => {
   return (
     <>
       <Separator>Pilots</Separator>
-      <ul className='mt-6 mx-12 md:mx-24 gap-1 p-1 bg-yellow-500 justify-items-center justify-center grid-cols-1 md:grid-cols-2 grid pilots-grid '>
+      <ul className='mt-6 mx-12 md:mx-24 gap-1 lg:gap-6 xl:gap-y-10 p-1 justify-items-center justify-center grid-cols-1 md:grid-cols-2 grid pilots-grid '>
         {pilots.map((pilot) => {
           const match = pilot.url.match(regex);
           const id = match ? match[1] : null;
@@ -37,9 +37,9 @@ const Pilots = ({ pilotUrls }: { pilotUrls: string[] }) => {
             : "../imgs/404.png";
 
           return (
-            <li className='bg-stone-950' key={pilot.url}>
+            <li className='bg-stone-950 border-4 border-yellow-500' key={pilot.url}>
               <img src={imageUrl} alt={pilot.name} className=" object-cover" />
-              <p className='py-2 text-center'><span className='text-xl'>{pilot.name}</span></p>
+              <p className='py-2 text-center border-t-[3px] border-yellow-500'><span className='text-xl'>{pilot.name}</span></p>
             </li>
           );
         })}
