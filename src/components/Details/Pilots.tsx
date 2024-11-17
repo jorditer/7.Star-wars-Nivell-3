@@ -37,7 +37,7 @@ const Pilots = ({ pilotUrls }: { pilotUrls: string[] }) => {
             : "../imgs/404.png";
 
           return (
-            <li className='bg-stone-950 border-4 border-yellow-500' key={pilot.url}>
+            <li className='hover:shadow-lg hover:shadow-yellow-500/75 hover:bg-stone-950/70 hover:rounded-md border-4 border-yellow-500' key={pilot.url}>
               <img src={imageUrl} alt={pilot.name} className=" object-cover" />
               <p className='py-2 text-center border-t-[3px] border-yellow-500'><span className='text-xl'>{pilot.name}</span></p>
             </li>

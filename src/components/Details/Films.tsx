@@ -37,7 +37,7 @@ const Films = ({ filmUrls }: { filmUrls: string[] }) => {
             : "../imgs/404.png";
 
           return (
-            <li className='bg-stone-950 border-4 border-yellow-500' key={film.url}>
+            <li className='hover:shadow-lg hover:shadow-yellow-500/75 hover:bg-stone-950/90 hover:rounded-md bg-stone-950/65 border-4 border-yellow-500' key={film.url}>
               <img src={imageUrl} alt={film.title} className=" object-cover" />
               <p className='py-2 text-center border-t-[3px] border-yellow-500'><span className='text-xl'>{film.title}</span></p>
             </li>

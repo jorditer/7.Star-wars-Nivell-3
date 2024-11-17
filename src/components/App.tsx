@@ -1,9 +1,12 @@
 // import { useState } from 'react'
+import ProtectedRoutes from './utils/ProtectedRoutes.tsx';
+import '../index.css';
 import Layout from './Layout/Layout'
 import Home from './Home.tsx';
 import Starships from './Starships';
 import { Routes, Route } from "react-router-dom";
 import StarshipDetails from './Details/StarshipDetails.tsx';
+import Login from './Login.tsx';
 
 function App() {
 
@@ -12,8 +15,11 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='starships' element={<Starships />} />
-        <Route path="starships/:name" element={<StarshipDetails />}/>
+        <Route path="login" element={<Login />}/>
+        <Route element={<ProtectedRoutes />}>
+          <Route path='starships' element={<Starships />} />
+          <Route path="starships/:name" element={<StarshipDetails />}/>
+        </Route>
       </Route>
     </Routes>
   </div> 
