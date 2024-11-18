@@ -91,3 +91,7 @@ input:user-invalid {
 .form-p {
 @apply mb-6 text-stone-800;
 }
+
+.error-text {
+  color: red;
+}

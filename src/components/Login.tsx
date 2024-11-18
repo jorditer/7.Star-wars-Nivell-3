@@ -1,48 +1,56 @@
 import { useState, FormEvent } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { FirebaseError } from "firebase/app";
+import { auth } from "../config/firebase";
 
-function Login() {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+function Login({ email }: { email: string }) {
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    fetch("http://localhost:3000/users", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data.user));
-  }
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("Logged in successfully");
+      setError(null); // Clear any previous errors
+    } catch (error) {
+      if (error instanceof FirebaseError) {
+      console.error("Error logging in:", error);
+      // Handle specific error codes
+      switch (error.code) {
+        case 'auth/wrong-password':
+          setError("Incorrect password. Please try again.");
+          break;
+        case 'auth/user-not-found':
+          setError("No user found with this email.");
+          break;
+        case 'auth/too-many-requests':
+          setError("Too many login attempts. Please try again later.");
+          break;
+        default:
+        }
+      }
+      }
+    }
+    
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setPassword(e.target.value);
   }
 
   return (
     <div className="form">
-      <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
-        <h1 className="form-text">Login Form</h1>
-        <p className="form-p">Sign up using your mail and a password</p>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h1 className="form-text">Login</h1>
+        <p className="form-p">Log in using <span className="font-bold text-black">{email}</span> and your password</p>
+        {error && <p className="error-text">{error}</p>}
         <input
-          className="login"
-          type="text"
-          placeholder="Email"
-          value={formData.email}
-          name="email"
-          onChange={(e) => handleChange(e)}
-        ></input>
-        <input
-          className="login"
-          type="text"
+          className={`${error ? "bg-[#ffcccc]" : ""} login`}
+          type="password"
           placeholder="Password"
-          value={formData.password}
+          value={password}
           name="password"
-          onChange={(e) => handleChange(e)}
-        ></input>
-
+          onChange={handleChange}
+        />
         <button className="submit" type="submit">
           Login
         </button>

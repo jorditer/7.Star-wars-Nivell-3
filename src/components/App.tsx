@@ -6,7 +6,7 @@ import Home from './Home.tsx';
 import Starships from './Starships';
 import { Routes, Route } from "react-router-dom";
 import StarshipDetails from './Details/StarshipDetails.tsx';
-import Login from './Login.tsx';
+// import Login from './Login.tsx';
 import Email from './Email.tsx';
 
 
@@ -15,8 +15,8 @@ function App() {
   return (
   <div className="">
     <Routes>
-      {/* <Route path="/" element={<Layout />}> */}
-      <Route path="/" element={<Login />}>
+      <Route path="/" element={<Layout />}>
+      {/* <Route path="/" element={<Login />}> */}
         <Route index element={<Home />} />
         <Route path="email" element={<Email />}/>
         <Route element={<ProtectedRoutes />}>
