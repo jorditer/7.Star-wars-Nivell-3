@@ -1,27 +1,51 @@
-import { useState } from 'react';
+import { useState, FormEvent } from "react";
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const handleSubmit = (e: React.FormEvent) => {
+function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(email);
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data.user));
+  }
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
   return (
-    <div className="rounded-lg bg-white m-10 py-7 px-9 w-[40%] mx-auto">
-      <h1 className="text-3xl mb-4 text-stone-900 font-medium">Enter your email to continue</h1>
-      <p className="mb-6 text-stone-800">Log in with your account. If you don't have one, you will be prompted to create one</p>
-      <form action="post" onSubmit={handleSubmit} >
-      <input
-        onChange={e=>setEmail(e.target.value)}
-        type="email"
-        name="email"
-        id="email"
-        className="border border-gray-300 p-2 mb-6 w-full rounded-lg"
-        placeholder="Enter your email"
-      />
-      <button className="bg-yellow-500 py-3 rounded-2xl w-2/4 mx-auto block hover:ring-2 hover:ring-yellow-400 active:ring-0 hover:shadow-lg" value={email} type="submit">Continue</button>
+    <div className="form">
+      <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
+        <h1 className="form-text">Login Form</h1>
+        <p className="form-p">Sign up using your mail and a password</p>
+        <input
+          className="login"
+          type="text"
+          placeholder="Email"
+          value={formData.email}
+          name="email"
+          onChange={(e) => handleChange(e)}
+        ></input>
+        <input
+          className="login"
+          type="text"
+          placeholder="Password"
+          value={formData.password}
+          name="password"
+          onChange={(e) => handleChange(e)}
+        ></input>
 
+        <button className="submit" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

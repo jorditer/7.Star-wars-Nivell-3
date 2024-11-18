@@ -71,3 +71,23 @@ input:user-invalid {
   border-width: 2px;
   background-color: #ffcccc;
 }
+
+.form {
+  @apply rounded-lg bg-white m-10 py-7 px-4 sm:px-9  md:w-[50%] sm:w-[75%] sm:mx-auto;
+}
+
+.login {
+  @apply border border-gray-300 p-2 mb-6 w-full rounded-lg;
+}
+
+.submit {
+  @apply bg-yellow-500 py-3 rounded-2xl w-2/4 mx-auto block hover:ring-2 hover:ring-yellow-400 active:ring-0 hover:shadow-lg;
+}
+
+.form-text {
+  @apply text-3xl mb-4 text-stone-900 font-medium;
+}
+
+.form-p {
+@apply mb-6 text-stone-800;
+}
