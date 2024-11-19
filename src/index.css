@@ -1041,6 +1041,8 @@ input:user-invalid {
 }
 
 .log {
+  margin: 1rem;
+  margin-inline-end: 1.5rem;
   border-radius: 1rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1073,11 +1075,17 @@ input:user-invalid {
 
 @media (min-width: 640px) {
   .log {
-    padding: 0.75rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .log {
+    margin: 0px;
   }
 }
 
@@ -1154,8 +1162,8 @@ input:user-invalid {
     margin-right: 6rem;
   }
 
-  .md\:w-\[25\%\] {
-    width: 25%;
+  .md\:w-\[15\%\] {
+    width: 15%;
   }
 
   .md\:grid-cols-2 {
@@ -1180,6 +1188,14 @@ input:user-invalid {
 }
 
 @media (min-width: 1024px) {
+  .lg\:max-h-\[500px\] {
+    max-height: 500px;
+  }
+
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
   .lg\:basis-\[1200px\] {
     flex-basis: 1200px;
   }
