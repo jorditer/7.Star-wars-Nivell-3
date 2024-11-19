@@ -12,7 +12,7 @@ const StarshipDetails = () => {
     <>
       <Spaceship details={details}/>    
       {/* <Pilots pilotUrls={details.pilots}></Pilots> */}
-      {details.pilots.length != 0 && <Pilots pilotUrls={details.pilots}/>}
+      {details.pilots.length !== 0 && <Pilots pilotUrls={details.pilots}/>}
       <Films filmUrls={details.films}/>
     </>
   );

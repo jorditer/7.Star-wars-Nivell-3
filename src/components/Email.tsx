@@ -20,12 +20,10 @@ const Email = () => {
 
     if (input && !input.checkValidity()) {
       setIsValid(false);
-      console.log("Form is not valid:", isValid);
       return;
     }
 
     setIsValid(true);
-    console.log("Form is valid:", isValid);
     setEmailExists(null);
     await checkIfEmailExists(email);
   };

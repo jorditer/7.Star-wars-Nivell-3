@@ -36,7 +36,7 @@ const Starships = () => {
     <div className="space-y-5 mt-6">
       {data?.pages.map((page) =>
         page.results.map((starship: Starship) => (
-          <div className="hover-effect bg-stone-950/90 hover:bg-stone-950/60 mx-24 p-4 rounded-md hover:rounded-2xl hover:shadow-inner active:shadow-none hover:shadow-yellow-500/45">
+          <div className="hover-effect bg-stone-950/90 hover:bg-stone-950/60 mx-4 md:mx-24 p-4 rounded-md hover:rounded-2xl hover:shadow-inner active:shadow-none hover:shadow-yellow-500/45">
           <Link to={`/starships/${starship.name}`} state={{ details: starship }}
           key={starship.name}
           
@@ -47,7 +47,7 @@ const Starships = () => {
           </div>
         ))
       )}
-      <div ref={loadMoreRef} />
+      <div className="py-2" ref={loadMoreRef} />
       {isFetchingNextPage && <div>Loading more...</div>}
     </div>
   );

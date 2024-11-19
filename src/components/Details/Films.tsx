@@ -28,7 +28,7 @@ const Films = ({ filmUrls }: { filmUrls: string[] }) => {
   return (
     <>
       <Separator>Films</Separator>
-      <ul className='mt-6 mx-12 md:mx-24 gap-1 lg:gap-6 xl:gap-y-10 p-1 justify-items-center justify-center grid-cols-1 md:grid-cols-2 grid films-grid '>
+      <ul className='mt-5 mx-12 md:mx-24 gap-1 lg:gap-6 xl:gap-y-10 p-1 justify-items-center justify-center grid-cols-1 md:grid-cols-2 grid films-grid pb-8'>
         {films.map((film) => {
           const match = film.url.match(regex);
           const id = match ? match[1] : null;

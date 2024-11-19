@@ -2,17 +2,24 @@ import { useState, FormEvent } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
 import { auth } from "../config/firebase";
+import { useAuth } from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 function Login({ email }: { email: string }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const { setIsUserLoggedIn, isUserLoggedIn } = useAuth();
+  const navigate = useNavigate();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("Logged in successfully");
-      setError(null); // Clear any previous errors
+      setIsUserLoggedIn(true);
+	    console.log(isUserLoggedIn);
+      setError(null);
+      navigate("/starships");
     } catch (error) {
       if (error instanceof FirebaseError) {
       console.error("Error logging in:", error);
