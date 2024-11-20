@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "tailwind": "npx tailwindcss -c config/tailwind.config.js -i ./src/styles/input.css -o ./src/styles/index.css --watch",
-
     "build-storybook": "storybook build"
   },
   "dependencies": {
