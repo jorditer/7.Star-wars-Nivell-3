@@ -54,7 +54,7 @@ span {
 } */
 
 body {
-  background-image: url('./imgs/background.jpg');
+  background-image: url('../imgs/background.jpg');
   background-size: cover; /* Ensure the image covers the entire background */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-attachment: fixed; /* Keep the background image fixed during scrolling */

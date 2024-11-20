@@ -609,10 +609,6 @@ video {
   display: grid;
 }
 
-.contents {
-  display: contents;
-}
-
 .h-full {
   height: 100%;
 }
@@ -925,7 +921,7 @@ span {
 } */
 
 body {
-  background-image: url('./imgs/background.jpg');
+  background-image: url('../imgs/background.jpg');
   background-size: cover;
   /* Ensure the image covers the entire background */
   background-repeat: no-repeat;

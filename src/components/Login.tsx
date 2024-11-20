@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
-import { auth } from "../config/firebase";
+import { auth } from "../../config/firebase";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
