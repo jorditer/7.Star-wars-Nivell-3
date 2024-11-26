@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a54603ae-efa1-4339-aaf6-eadee46a2541)# Star Wars Web Application
+# Star Wars Web Application
 
 This project is a Star Wars-themed web application built with modern web technologies. It allows users to explore various Star Wars starships, view detailed information about them, and log in or sign up using Firebase authentication.
 
