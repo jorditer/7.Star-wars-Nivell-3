@@ -3,8 +3,10 @@ import { Details } from "../../interfaces/Details";
 import Pilots from './Pilots';
 import Spaceship from "./Starship";
 import Films from "./Films"
+import useScrollToTop from '../../hooks/useScrollToTop';
 
 const StarshipDetails = () => {
+  useScrollToTop('/starships');
   const location = useLocation();
   const { details } = location.state as { details: Details };
 

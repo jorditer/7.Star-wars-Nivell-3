@@ -1,4 +1,4 @@
-import '../src/input.css'
+import '../src/styles/index.css'
 import type { Preview } from "@storybook/react";
 
 const preview: Preview = {

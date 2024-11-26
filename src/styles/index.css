@@ -609,6 +609,10 @@ video {
   display: grid;
 }
 
+.contents {
+  display: contents;
+}
+
 .h-full {
   height: 100%;
 }
@@ -743,6 +747,16 @@ video {
   background-color: rgb(0 0 0 / 0.6);
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
 .bg-stone-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(12 10 9 / var(--tw-bg-opacity, 1));
@@ -774,8 +788,16 @@ video {
   padding: 0.5rem;
 }
 
+.p-20 {
+  padding: 5rem;
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.p-60 {
+  padding: 15rem;
 }
 
 .p-7 {
