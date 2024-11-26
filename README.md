@@ -9,7 +9,7 @@ This project is a Star Wars-themed web application built with modern web technol
 - [Available Scripts](#available-scripts)
 - [Features](#features)
 - [Testing](#testing)
-- [Images][#images]
+- [Images](#images)
 
 ## Technologies Used
 
