@@ -19,7 +19,6 @@ This project is a Star Wars-themed web application built with modern web technol
 - **Firebase**: A platform developed by Google for creating mobile and web applications, used here for authentication.
 - **React Query**: A library for fetching, caching, and updating asynchronous data in React.
 - **React Router**: A collection of navigational components that compose declaratively with your application.
-- **Storybook**: An open-source tool for developing UI components in isolation.
 - **Playwright**: A framework for Web Testing and Automation.
 - **useContext**: A React hook that provides a way to pass data through the component tree without having to pass props down manually at every level.
 
