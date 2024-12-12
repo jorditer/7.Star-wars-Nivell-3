@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const User = () => {
 	const { isUserLoggedIn, logout } = useAuth();
-	
+
 	return (
 		<div className="absolute top-0 right-0 p-4 sm:p-6">
 			{
