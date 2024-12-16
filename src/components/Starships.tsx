@@ -36,11 +36,14 @@ const Starships = () => {
     <div className="space-y-5 mt-6">
       {data?.pages.map((page) =>
         page.results.map((starship: Starship) => (
-          <div  key={starship.name} className="hover-effect bg-stone-950/80 hover:bg-stone-950/85 mx-4 md:mx-24 p-4 rounded-md border-1 border-black hover:shadow-inner active:shadow-none hover:shadow-yellow-500/45">
-          <Link to={`/starships/${starship.name}`} state={{ details: starship }} >
+          <div
+            key={starship.name}
+            className="hover-effect bg-stone-950/80 hover:bg-stone-950/85 mx-4 md:mx-24 p-4 rounded-md border-1 border-black hover:shadow-inner active:shadow-none hover:shadow-yellow-500/45"
+          >
+            <Link to={`/starships/${starship.name}`} state={{ details: starship }}>
               <h2>{starship.name.toUpperCase()}</h2>
               <h3>{starship.model}</h3>
-          </Link>
+            </Link>
           </div>
         ))
       )}
