@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 import clsx from 'clsx';
 import styles from './button.module.css';
-import '../../styles/index.css';
+import '../../../styles/index.css';
 
 export type ButtonProps = ComponentProps<'button'> & {
 // This imports all the typical props of a button, which means ButtonProps takes everything that a button can take & the varian  t
