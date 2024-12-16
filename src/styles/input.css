@@ -99,5 +99,6 @@ span {
 }
 
 .log {
-  @apply p-2 px-3 sm:p-2 sm:px-4 md:m-0 m-4 me-6 rounded-2xl text-white active:bg-stone-900/30 bg-stone-900/60 hover:shadow-sm active:shadow-none hover:shadow-yellow-600 text-lg border  border-stone-600 sm:text-xl font-bold;
+  @apply p-2 px-3 sm:p-2 sm:px-4 md:m-0 m-4 me-6 rounded-2xl text-white active:bg-stone-900/30 bg-stone-950/70 hover:bg-stone-900/60 hover:shadow-sm active:shadow-none hover:shadow-yellow-600 text-lg border  border-stone-600 sm:text-xl font-bold;
+   
 }

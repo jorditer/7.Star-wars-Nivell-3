@@ -1,5 +1,6 @@
 import { useAuth } from '../../hooks/useAuth';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 const User = () => {
 	const { isUserLoggedIn, logout } = useAuth();
@@ -9,10 +10,10 @@ const User = () => {
 			{
 				isUserLoggedIn ?
 				 <Link to="/">
-					<button onClick={logout} className="log">LOGOUT</button> 
+					<Button onClick={logout} variant="weird" size="medium">LOGOUT</Button> 
 				 </Link> :
 					<Link to="/email">
-					<h1 className="log">LOGIN</h1>
+					<Button className="log" variant="weird" size="medium">LOGIN</Button>
 				</Link>
 
 			}

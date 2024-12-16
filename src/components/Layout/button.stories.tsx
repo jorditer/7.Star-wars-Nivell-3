@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './button';
+import  Button  from './Button';
+
 
 const meta = {
   // Metadata that will be shared across every story in the current .stories files
@@ -42,13 +43,13 @@ export const Destructive: Story = {
   },
 };
 
-export const Dark: Story = {
-  parameters: {
-    themes: {
-      themeOverride: 'dark',
-    },
-  },
-};
+export const Weird: Story = {
+  args: {
+  variant: 'weird',
+  className: 'log',
+  children: 'LOGIN',
+  }
+}
 
 export const Mobile: Story = {
   parameters: {

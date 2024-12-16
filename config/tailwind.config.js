@@ -5,7 +5,8 @@ export default {
     files: [
       "../src/components/**/*.{js,jsx,ts,tsx}", 
       "../index.html",
-      "../src/stories/*{tsx, ts, mdx}"
+      "../src/components/layout/*{tsx, ts, mdx}",
+      '../.storybook/**/*.ts',
     ],
   },
   theme: {
