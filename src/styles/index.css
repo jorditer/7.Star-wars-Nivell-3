@@ -1045,18 +1045,16 @@ span {
 }
 
 .log {
-  margin: 1rem;
-  margin-inline-end: 1.5rem;
+  margin: 0.5rem;
+  margin-left: 0px;
+  margin-right: 0px;
   border-radius: 1rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(87 83 78 / var(--tw-border-opacity, 1));
   background-color: rgb(12 10 9 / 0.7);
-  padding: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));

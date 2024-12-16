@@ -8,7 +8,8 @@ interface StarshipsData {
 }
 
 const fetchStarships = async ({ pageParam = 1 }): Promise<StarshipsData> => {
-  const response = await fetch(`/api/starships/?page=${pageParam}`);
+  // const response = await fetch(`https://swapi.dev/api/starships/?page=${pageParam}`);
+  const response = await fetch(`https://swapi.py4e.com/api/starships/?page=${pageParam}`);
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }

@@ -10,7 +10,7 @@ const User = () => {
 			{
 				isUserLoggedIn ?
 				 <Link to="/">
-					<Button onClick={logout} variant="weird" size="medium">LOGOUT</Button> 
+					<Button className="log" onClick={logout} variant="weird" size="medium">LOGOUT</Button> 
 				 </Link> :
 					<Link to="/email">
 					<Button className="log" variant="weird" size="medium">LOGIN</Button>
