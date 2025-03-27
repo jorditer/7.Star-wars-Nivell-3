@@ -15,9 +15,7 @@ function Login({ email }: { email: string }) {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      console.log("Logged in successfully");
       setIsUserLoggedIn(true);
-	    console.log(isUserLoggedIn);
       setError(null);
       navigate("/starships");
     } catch (error) {

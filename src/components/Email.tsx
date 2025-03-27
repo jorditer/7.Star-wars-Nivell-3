@@ -10,10 +10,6 @@ const Email = () => {
   const [isValid, setIsValid] = useState<boolean>(true);
   const emailInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    console.log("isValid state changed:", isValid);
-  }, [isValid]);
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const input = emailInputRef.current;
